@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Michael_elf | Creative Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#0b0b0b;
+    --card:#161616;
+    --text:#ffffff;
+    --secondary:#9f9f9f;
+    --accent:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:25px 8%;
+    backdrop-filter:blur(20px);
+    background:rgba(0,0,0,.4);
+    z-index:1000;
+}
+
+nav .logo{
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    animation:fadeUp 1.2s ease;
+}
+
+.hero h1{
+    font-size:clamp(3rem,8vw,7rem);
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:var(--secondary);
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+}
+
+.buttons{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:14px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:white;
+    color:black;
+}
+
+.btn-outline{
+    border:1px solid #444;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+.about{
+    max-width:900px;
+    color:var(--secondary);
+    line-height:2;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-top:50px;
+}
+
+.stat{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+}
+
+.stat h3{
+    font-size:2rem;
+}
+
+.gallery{
+    column-count:3;
+    column-gap:18px;
+}
+
+.gallery img{
+    width:100%;
+    margin-bottom:18px;
+    border-radius:18px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.video-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+}
+
+.video-card h3{
+    margin-bottom:10px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact-links{
+    margin-top:30px;
+}
+
+.contact-links a{
+    display:inline-block;
+    margin:10px;
+    text-decoration:none;
+    color:white;
+    padding:14px 24px;
+    border:1px solid #333;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.contact-links a:hover{
+    background:white;
+    color:black;
+}
+
+footer{
+    padding:50px;
+    text-align:center;
+    color:#666;
+}
+
+@keyframes fadeUp{
+
+from{
+    opacity:0;
+    transform:translateY(50px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+@media(max-width:900px){
+
+.gallery{
+    column-count:2;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+.gallery{
+    column-count:1;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Michael_elf</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Creative Portfolio</h1>
+
+<p>
+Mahasiswa Universitas Wahidiyah
+yang berfokus pada fotografi,
+desain visual, dan videografi.
+</p>
+
+<div class="buttons">
+
+<a href="#works" class="btn btn-primary">
+Lihat Karya
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Hubungi Saya
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Tentang Saya
+</h2>
+
+<div class="about">
+
+Saya adalah seorang kreator visual yang memiliki minat pada
+fotografi, desain grafis, dan videografi. Portofolio ini
+menjadi tempat untuk mendokumentasikan karya serta perjalanan
+kreatif yang terus berkembang.
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>Foto</h3>
+<p>Fotografi Kreatif</p>
+</div>
+
+<div class="stat">
+<h3>Design</h3>
+<p>Visual Branding</p>
+</div>
+
+<div class="stat">
+<h3>Video</h3>
+<p>Videografi & Editing</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="works">
+
+<h2 class="section-title">
+Galeri Karya
+</h2>
+
+<div class="gallery">
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+<img src="desain1.jpg">
+<img src="desain2.jpg">
+<img src="desain3.jpg">
+<img src="desain4.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Videografi
+</h2>
+
+<div class="video-grid">
+
+<div class="video-card">
+<h3>Project Video #1</h3>
+<p>Tambahkan link YouTube hasil videografi Anda.</p>
+</div>
+
+<div class="video-card">
+<h3>Project Video #2</h3>
+<p>Tambahkan link YouTube hasil videografi Anda.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">
+Kontak
+</h2>
+
+<p>Mari berkolaborasi atau berdiskusi mengenai proyek kreatif.</p>
+
+<div class="contact-links">
+
+<a href="#">Instagram</a>
+<a href="#">WhatsApp</a>
+<a href="#">Email</a>
+<a href="#">GitHub</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Michael_elf — Creative Portfolio
+
+</footer>
+
+</body>
+</html>
